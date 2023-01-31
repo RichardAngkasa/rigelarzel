@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Image from "next/image";
-import { CiPlay1 } from "react-icons/ci";
+import { BsPlay } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
       <div>
         <div className="relative">
           <img
-            src="https://i.ibb.co/g6tPmLz/20190424084538-IMG-9200-min.jpg"
+            src="/mobile-background.jpg"
             alt="profile"
             className="h-screen object-cover brightness-50"
           />
@@ -46,14 +46,14 @@ export default function Home() {
           <div className="absolute z-10 ml-4 mb-4">
             <h1 className="font-medium text-xl mb-2 ">Doctor Strange Cast</h1>
             <div className="flex items-center">
-              <CiPlay1 />
+              <BsPlay className="text-2xl" />
               <h1 className=" rounded-md  text-sm text-gray-200 w-fit h-fit px-2">
                 Play | After Effects
               </h1>
             </div>
           </div>
           <img
-            src="https://i.ibb.co/GvvVKPr/Screenshot-2023-01-31-212304-min.jpg"
+            src="/mobile-aftereffect.jpg"
             alt="Doctor Strange Cast"
             className="brightness-50 h-40 w-full  rounded-lg object"
           />
@@ -62,31 +62,30 @@ export default function Home() {
           <div className="absolute z-10 ml-4 mb-4">
             <h1 className="font-medium text-xl mb-2">Cathouse Production_MV</h1>
             <div className="flex items-center">
-              <CiPlay1 />
+              <BsPlay className="text-2xl" />
               <h1 className=" rounded-md  text-sm text-gray-200 w-fit h-fit px-2">
                 Play | 2D Animation
               </h1>
             </div>
           </div>
           <img
-            src="https://i.ibb.co/F88PRB0/Screenshot-2023-01-31-212607-min.jpg"
+            src="/mobile-2d-animations.jpg"
             alt="Cathouse Production_MV"
             className="brightness-50 h-40 w-full  rounded-lg object"
           />
         </div>
         <div className="my-14 flex flex-col justify-end">
           <div className="absolute z-10 ml-4 mb-4">
-            {" "}
             <h1 className="font-medium text-xl mb-2 ">Explore and Beyond</h1>
             <div className="flex items-center">
-              <CiPlay1 />
+              <BsPlay className="text-2xl" />
               <h1 className=" rounded-md  text-sm text-gray-200 w-fit h-fit px-2">
                 Play | Showreel 2022
               </h1>
             </div>
           </div>
           <img
-            src="https://i.ibb.co/LCPbvGX/Screenshot-2023-01-31-212837-min.jpg"
+            src="/mobile-showreel.jpg"
             alt="Explore and Beyond"
             className="brightness-50 h-40 w-full  rounded-lg object"
           />
@@ -94,9 +93,8 @@ export default function Home() {
         <div className="h-[1px] bg-gray-500"></div>
         {/* footer */}
         <div className="my-8 flex items-center">
-          {" "}
           <img
-            src="https://i.ibb.co/QNLHypw/Snapinsta-app-1080-241392345-377716467197384-8010878308815564834-n-min.jpg"
+            src="/mobile-profile.jpg"
             alt="profile"
             className="rounded-full h-28 w-28 object-cover"
           />
