@@ -118,11 +118,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative sm:hidden">
           <img
             src="/mobile-background.jpg"
             alt="profile"
             className="h-screen w-screen object-cover opacity-40 object-top sm:opacity-30 sm:object-[0_20%] sm:blur-none"
+          />
+          <div className="h-1/2 absolute w-full z-40 bottom-0 bg-gradient-to-t from-black"></div>
+        </div>
+        <div className="relative hidden sm:flex">
+          <img
+            src="/desktop-profile.jpg"
+            alt="profile"
+            className="h-screen w-screen object-cover opacity-40 object-top sm:opacity-50 sm:object-[0_25%] sm:blur-none"
           />
           <div className="h-1/2 absolute w-full z-40 bottom-0 bg-gradient-to-t from-black"></div>
         </div>
