@@ -39,3 +39,16 @@ a {
     color: white;background: black;
   }
 } 
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+iframe {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ytp-chrome-top {
+  visibility: hidden !important;
+}
