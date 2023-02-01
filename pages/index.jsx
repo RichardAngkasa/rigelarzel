@@ -1,21 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { BsPlay } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 
 export default function Home() {
+  const loadRef = useRef(null);
+
+  useEffect(() => {
+    loadRef.current.classList.add("-translate-y-10");
+
+    setTimeout(() => {
+      loadRef.current.classList.add("translate-y-0");
+    }, 300);
+  }, []);
   return (
     <>
       <Head>
         <title>Rigel</title>
       </Head>
-      <div className="w-screen flex flex-col items-center">
+      <div
+        className="w-screen flex flex-col items-center"
+        // onLoadStart={() => window.scrollTo(0, 500)}
+      >
         {" "}
         {/* headbar */}
         <div className="h-16 bg-transparent backdrop-blur-sm fixed flex justify-between z-50 px-4 w-screen items-center sm:max-w-[60rem]">
           <div className="text-2xl">R.</div>
-          <div className="border p-2 border-gray-200 rounded-lg">
+          <div className="border sm:border-2 p-2 border-gray-200 rounded-lg">
             <a href="https://26d3b70a-4cc7-4adc-8905-57fd4b8ec126.filesusr.com/ugd/c33274_76c17928c911416a953808d925898585.pdf">
               C V
             </a>
@@ -55,7 +68,19 @@ export default function Home() {
           </div>
 
           {/* yg diatas */}
-          <div className=" z-50 bg-transparent hidden sm:flex sm:flex-col snap-y overflow-y-auto h-52 w-fit scrollbar-hide relative">
+          {/* <button
+            onScroll={() => {
+              scrolldelay = setTimeout(pageScroll, 10);
+              window.scrollBy(0, 1);
+            }}
+          >
+            click
+          </button> */}
+          <div
+            ref={loadRef}
+            className="transition-all duration-500 z-50 bg-transparent hidden sm:flex sm:flex-col snap-y overflow-y-auto h-52 w-fit scrollbar-hide relative scroll-t"
+            // onLoad={() => window.scrollTo(0, 500)}
+          >
             {/*  */}
             <div
               className="my-5 flex flex-col justify-end relative px-4 snap-center rounded-lg"
@@ -70,7 +95,7 @@ export default function Home() {
             >
               <div className="absolute z-10 ml-4 mb-4 bottom-0">
                 <h1 className="font-medium text-xl mb-2 ">
-                  Doctor Strange ast
+                  Doctor Strange Cast
                 </h1>
                 <div className="flex items-center">
                   <BsPlay className="text-2xl" />
